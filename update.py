@@ -1,6 +1,6 @@
 import requests
 
-def fetch_and_filter_table(output_file="test.txt"):
+def fetch_and_filter_table(output_file="datanew.txt"):
     """
     1. Fetches the raw markdown content from the GitHub URL.
     2. Locates the lines after '| Company | Role | Location | Application/Link | Date Posted |'
@@ -53,4 +53,4 @@ def fetch_and_filter_table(output_file="test.txt"):
 
 
 if __name__ == "__main__":
-    fetch_and_filter_table("temp.txt")
+    fetch_and_filter_table("datanew.txt")

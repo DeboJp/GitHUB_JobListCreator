@@ -11,6 +11,7 @@ def convert_txt_to_csv(txt_file_path, csv_file_path):
        and removes "?utm_source=Simplify&ref=Simplify" if present.
     3. Determines whether the location is in the USA or not, 
        and appends "Yes"/"No" in the final 'Is_US_Location' column.
+    4. Reverses the order of the rows (excluding the header) before writing to the CSV.
 
     Args:
         txt_file_path (str): Path to the input text file.
@@ -110,6 +111,9 @@ def convert_txt_to_csv(txt_file_path, csv_file_path):
         items.append("Yes" if is_us_location(location) else "No")
 
         data.append(items)
+    
+    # Reverse the data list before writing
+    data.reverse()
 
     # Write CSV
     with open(csv_file_path, 'w', newline='', encoding='utf-8') as outfile:
@@ -118,7 +122,7 @@ def convert_txt_to_csv(txt_file_path, csv_file_path):
         writer.writerows(data)
 
 if __name__ == "__main__":
-    txt_file = "raw.txt"   # Replace with your actual input file path
-    csv_file = "clean.csv"  # Replace with your desired output file path
+    txt_file = "datanew.txt"   # Replace with your actual input file path
+    csv_file = "new_clean.csv"  # Replace with your desired output file path
     convert_txt_to_csv(txt_file, csv_file)
     print(f"Successfully converted {txt_file} to {csv_file}")
