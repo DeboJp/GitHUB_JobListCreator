@@ -53,4 +53,4 @@ def fetch_and_filter_table(output_file="test.txt"):
 
 
 if __name__ == "__main__":
-    fetch_and_filter_table("test.txt")
+    fetch_and_filter_table("temp.txt")

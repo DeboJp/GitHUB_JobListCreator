@@ -119,6 +119,6 @@ def convert_txt_to_csv(txt_file_path, csv_file_path):
 
 if __name__ == "__main__":
     txt_file = "raw.txt"   # Replace with your actual input file path
-    csv_file = "clean5.csv"  # Replace with your desired output file path
+    csv_file = "clean.csv"  # Replace with your desired output file path
     convert_txt_to_csv(txt_file, csv_file)
     print(f"Successfully converted {txt_file} to {csv_file}")
